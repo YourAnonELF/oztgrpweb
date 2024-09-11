@@ -26,7 +26,7 @@
 <body>
 
 <header>
-<div class="header-box">
+<div class="header-box , border-box">
     <div class="header-menu">
         <img class="header-logo" src="OZT-nonback.png" alt="ozt-logo">
 
@@ -36,15 +36,15 @@
 
     <div class="header-buttons">
         <a href="#AnaSayfa">Ana Sayfa</a>
-        <a href="#iletişim">İletişim</a>
-        <a href="#Hakkımızda">Hakkımızda</a>
+        <a href="#Iletisim">İletişim</a>
+        <a href="#Hakkimizda">Hakkımızda</a>
     </div>
 </div>
 
 </header>
-
-<div>
-    <p class="hosgeldiniz">
+<section id="AnaSayfa" class="part1 , background-logo">
+    <div class="hosgeldin-div">
+    <p class="hosgeldin-text">
 
         Markanızı geleceğe taşıyacak, duygu ve
         düşüncelerinizi en zarif şekilde yansıtan bir web 
@@ -52,13 +52,44 @@
         grafikler ile kullanıcı dostu arayüzlerin buluştuğu 
         noktada, markanızı çevrimiçi dünyada en güçlü şekilde 
         temsil etmenizi sağlıyoruz.
+        <img src="OZT-nonback.png" alt="ozt-logo">
 
 
     </p>
+</div>
 
+<div class="asagi-icon">
+
+    <img src="asagi.png" alt="asagi-icon">
 
 </div>
 
+</section>
+
+<section class="part2" id="Iletisim">
+
+
+</section>
+
+
+
+<section class="part3" id="Hakkimizda">
+
+</section>
+
+<script>
+const links = document.querySelectorAll('.scroll-link');
+links.forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault(); // Varsayılan davranışı engelle
+        const targetID = this.getAttribute('href'); // Hedefin ID'sini al
+        const targetSection = document.querySelector(targetID); // Hedef bölümü seç
+        targetSection.scrollIntoView({
+            behavior: 'smooth' // Yumuşak kaydırma
+        });
+    });
+});
+</script>
 
 </body>
 
